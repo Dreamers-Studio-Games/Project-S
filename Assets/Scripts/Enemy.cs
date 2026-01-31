@@ -5,8 +5,21 @@ using UnityEngine.VFX;
 
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Animator))]
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IAttributes
 {
+  float _health; public float Health
+  {
+    get => _health;
+    set
+    {
+      _health = Mathf.Clamp(value, 0f, 100f);
+      Debug.Log($"Health: {_health}");
+      if (_health == 0f)
+      {
+        gameObject.SetActive(false);
+      }
+    }
+  }
   [SerializeField] VisualEffect beamVFX;
   [SerializeField] float attackRadius;
   Transform target;
@@ -18,12 +31,12 @@ public class Enemy : MonoBehaviour
     target = GameObject.Find("PlayerCharacter").transform;
     agent = GetComponent<NavMeshAgent>();
     animator = GetComponent<Animator>();
+    Health = 100f;
     StartCoroutine(Pursue());
   }
 
   IEnumerator Pursue()
   {
-    Debug.Log("Pursue");
     agent.isStopped = false;
     animator.SetFloat("Velocity", 1f);
     while (Vector3.Distance(transform.position, target.position) > attackRadius)
@@ -45,7 +58,6 @@ public class Enemy : MonoBehaviour
 
   IEnumerator Attack()
   {
-    Debug.Log("Attack");
     agent.isStopped = true;
     animator.SetFloat("Velocity", 0f);
     beamVFX.Play();
@@ -56,7 +68,20 @@ public class Enemy : MonoBehaviour
       transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, agent.angularSpeed * Time.deltaTime);
       yield return null;
     }
-    yield return new WaitForSeconds(1f);
+    yield return new WaitForSeconds(0.3f);
+    if (Physics.SphereCast(
+      transform.position,
+      0.25f,
+      transform.forward,
+      out var hit,
+      10f,
+      LayerMask.GetMask("Player")
+    ))
+    {
+      var attributes = hit.collider.GetComponent<IAttributes>();
+      attributes.Health -= 10f;
+    }
+    yield return new WaitForSeconds(0.7f);
     StartCoroutine(Pursue());
   }
 }

@@ -158,7 +158,8 @@ GameObject:
   - component: {fileID: 4684169622115950713}
   - component: {fileID: 8369573702768426137}
   - component: {fileID: 6115870603056707170}
-  m_Layer: 0
+  - component: {fileID: 4638981439792560304}
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,6 +241,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beamVFX: {fileID: 252306169923112105}
   attackRadius: 7
+--- !u!136 &4638981439792560304
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7465686030487593115}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &5798009993323480875
 PrefabInstance:
   m_ObjectHideFlags: 0
