@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="background-image: url(&quot;project://database/Assets/UI/HealthiconBackground%201.png?fileID=2800000&amp;guid=eee8d94794b5497429f996bffea931ce&amp;type=3#HealthiconBackground 1&quot;); width: 75px; height: 75px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px;">
+        <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/HealthiconBorder%201.png?fileID=2800000&amp;guid=f6932c6205c803840bf624df4b1d8848&amp;type=3#HealthiconBorder 1&quot;);">
+            <ui:VisualElement style="flex-grow: 1; margin-top: 29px; margin-left: 23px; margin-right: 2px; margin-bottom: 38px;">
+                <ui:VisualElement name="Health" style="flex-grow: 1; width: 100%; background-color: rgb(87, 163, 67);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
