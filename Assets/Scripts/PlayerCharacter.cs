@@ -87,7 +87,8 @@ public class PlayerCharacter : MonoBehaviour, IAttributes
     {
       animator.SetFloat("Velocity", 0f);
       return;
-    };
+    }
+    ;
     var move = moveAction.ReadValue<Vector2>();
     if (lookAction.ReadValue<Vector2>().sqrMagnitude > 0.01f)
     {

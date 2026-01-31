@@ -8,6 +8,33 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Controls.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Level/MaskRoom.unity
+    guid: 559725978c4c48945b3a3a3cd5f25585
+  - enabled: 1
+    path: Assets/Scenes/Level/RoomOneLarge.unity
+    guid: 9efb558839403c04e99071cb4904bbd6
+  - enabled: 1
+    path: Assets/Scenes/Level/RoomTwoLarge.unity
+    guid: 706c1570b5b74ec43a83e67c18424c03
+  - enabled: 1
+    path: Assets/Scenes/Level/RoomThreeLarge.unity
+    guid: 0f49b8667ae65a148891b3d1db81bd93
+  - enabled: 1
+    path: Assets/Scenes/Level/RoomFourMe.unity
+    guid: b98d630981eafb84f8f6de1c6880a8d7
+  - enabled: 1
+    path: Assets/Scenes/Level/RoomFiveMe.unity
+    guid: 7bd5ab25056252642a369f131da75770
+  - enabled: 1
+    path: Assets/Scenes/Level/RoomSixMe.unity
+    guid: ae2fe918f39ccc14b8dc4a5d9a941df5
+  - enabled: 1
+    path: Assets/Scenes/Level/RoomSevenSm.unity
+    guid: 479576ff122948444882310659a7212d
+  - enabled: 1
+    path: Assets/Scenes/Level/RoomEightSm.unity
+    guid: 8d75c17633710a04d98c6369b1f0c631
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
